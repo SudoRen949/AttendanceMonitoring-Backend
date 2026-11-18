@@ -8,11 +8,11 @@ load_dotenv()
 
 app = Flask(__name__)
 
-CORS(app, resources={
-	r"/*": {"origins": ["https://amsys.wasmer.app","https://amsys-2.wasmer.app"]},
-	methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allow_headers=["Content-Type", "Authorization"]
-})
+CORS(app, 
+	 resources={r"/*": {"origins": ["https://amsys.wasmer.app","https://amsys-2.wasmer.app"]}},
+	 methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+	 allow_headers=["Content-Type", "Authorization"]
+)
 
 @app.route("/api/<path:db_path>", methods=["GET"])
 def get_value(db_path):
