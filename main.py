@@ -80,6 +80,6 @@ def delete_path(db_path):
 	response.raise_for_status()
 	return { "deleted": True }, 200
 
-#if __name__ == "__main__":
-#	app.run(host="localhost", port="5000")
+if __name__ == "__main__":
+	app.run()
 
