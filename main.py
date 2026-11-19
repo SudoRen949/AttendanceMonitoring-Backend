@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__)
 
 CORS(app, 
-	 resources={r"/*": {"origins": ["https://amsys.wasmer.app","https://amsys-2.wasmer.app"]}},
+	 resources={r"/api/*": {"origins": ["https://amsys.wasmer.app","https://amsys-2.wasmer.app"]}},
 	 methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 	 allow_headers=["Content-Type", "Authorization"]
 )
