@@ -4,6 +4,8 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from flask import Flask, request, abort
 
+print("Hello World")
+
 load_dotenv()
 
 app = Flask(__name__)
